@@ -8,6 +8,19 @@ Standardize how OctoAcme releases features to production to reduce risk and impr
 - Minor: incremental features and improvements
 - Major: significant functionality or breaking changes
 
+## Owners & Responsibilities
+
+| Release Task                        | Owner        | Approver (Major) |
+|-------------------------------------|--------------|-----------------|
+| Prepare release notes               | Developer    | PM              |
+| Run smoke tests (staging)           | QA Lead      | QA Lead         |
+| QA sign-off confirmation            | QA Lead      | QA Lead         |
+| Deploy to staging                   | Developer    | PM              |
+| Deploy to production                | Developer    | PM              |
+| Post-deploy verification            | QA Lead      | PM              |
+| Stakeholder / support notification  | PM           | PM              |
+| Sponsor notification (Major only)   | PM           | Sponsor         |
+
 ## Pre-release requirements
 - All acceptance criteria met and PRs merged
 - Passing CI and security scans
@@ -19,9 +32,11 @@ Standardize how OctoAcme releases features to production to reduce risk and impr
 - [ ] Deployment window scheduled (if needed)
 - [ ] Backup or snapshot (if applicable)
 - [ ] Deploy to staging and run smoke tests
+- [ ] **QA Lead sign-off received** (written confirmation)
 - [ ] Deploy to production (automated pipeline preferred)
 - [ ] Run post-deploy verifications
 - [ ] Announce release to stakeholders and support
+- [ ] **Sponsor notified** (Major releases only)
 
 ## Rollback & Incident Playbook
 - If a deployment fails or causes a critical issue:
